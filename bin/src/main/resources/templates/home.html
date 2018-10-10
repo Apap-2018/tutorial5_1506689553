@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Home</title>
+	</head>
+	
+	<body>
+		<h2>Hello!</h2>
+		
+		<h3>List All Dealer and Car</h3>
+		<td><a th:href="@{/dealer/view-all}">Lihat</a></td>
+		
+		<h3>Tambah Dealer</h3>
+		<td><a th:href="@{/dealer/add}">Tambah</a></td>
+		
+		<h3>Cari Dealer berdasarkan Id</h3>
+		<form th:action="@{/dealer/view}" method="GET">
+			Id Dealer: <br>
+			<input type="text" name="id"/>
+			<button type="submit">Cari</button>
+		</form>
+		
+		<h3>Hapus Dealer </h3>
+		<form th:action="@{/dealer/delete}" method="GET">
+			Id Dealer: <br>
+			<input type="text" name="id"/>
+			<button type="submit">Delete</button>
+		</form>
+		
+		<h3>Update Dealer </h3>
+		<form th:action="@{/dealer/update}" method="GET">
+			Id Dealer: <br>
+			<input type="text" name="id"/>
+			</br>
+			Alamat : <br>
+			<input type="text" name="alamat"/>
+			</br>
+			Telepon : <br>
+			<input type="text" name="noTelp"/>
+			<button type="submit">Update Dealer</button>
+			<br>
+			</br>
+		</form>
+		
+		<h3>Delete Car </h3>
+		<form th:action="@{/car/delete}" method="GET">
+			Id Car: <br>
+			<input type="text" name="id"/>
+			<button type="submit">Delete</button>
+		</form>
+		
+		<h3>Update Car berdasarkan Id Car</h3>
+		<form th:action="@{/car/update}" method="GET">
+			Id Car: <br>
+			<input type="text" name="id"/>
+			</br>
+			Brand : <br>
+			<input type="text" name="brand"/>
+			</br>
+			Tipe : <br>
+			<input type="text" name="type"/>
+			</br>
+			Harga : <br>
+			<input type="text" name="price"/>
+			</br>
+			Jumlah : <br>
+			<input type="text" name="amount"/>
+			<button type="submit">Update Car</button>
+			<br>
+			</br>
+		</form>
+	</body>
+</html>
